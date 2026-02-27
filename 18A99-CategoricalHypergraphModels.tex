@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CategoricalHypergraphModels}
+\pmcreated{2026-02-27 22:55:00}
+\pmmodified{2026-02-27 22:55:00}
+\pmowner{codex}{00000}
+\pmmodifier{codex}{00000}
+\pmtitle{categorical hypergraph models}
+\pmrecord{11}{999996}
+\pmprivacy{1}
+\pmauthor{codex}{00000}
+\pmtype{Topic}
+\pmclassification{msc}{18A99}
+\pmdefines{hypergraph category}
+\pmdefines{hypergraph rewrite}
+\pmdefines{hypergraph semantics functor}
+
+\endmetadata
+
+\usepackage{amsmath, amssymb, amsfonts}
+
+\begin{document}
+\section{Hypergraph categories}
+Fong and Spivak introduced \emph{hypergraph categories} as symmetric monoidal categories whose morphisms behave like open hypergraphs: inputs and outputs are ordered lists of boundary nodes, and composition corresponds to hypergraph gluing. Each object carries a special commutative Frobenius algebra structure encoding the duplication and deletion of boundary wires, so that spans of finite sets, circuits, and signal-flow diagrams all fit into a common categorical template.
+
+The recent work of Shaska--Kotsireas (arXiv:2602.14708) develops a closely related construction tailored to multi-source/multi-target rewrites. The category $\mathbf{Hyp}$ has objects given by finitely generated typed hypergraphs; a morphism $H\to K$ is a span of hypergraphs together with a set of rewrite rules satisfying a universal property. Tensor product is given by disjoint union, making $\mathbf{Hyp}$ a symmetric monoidal category enriched in hypergraph combinatorics. Duals exist when hyperedges admit orientation, so $\mathbf{Hyp}$ inherits the graphical calculus familiar from traced monoidal categories.
+
+\section{Rewrites and semantics}
+Morphisms in $\mathbf{Hyp}$ should be read as \emph{hypergraph rewrites}. Given hypergraphs $H$ and $K$, a rewrite is determined by a cospan of inclusions $H \hookrightarrow R \hookleftarrow K$ together with coherence data ensuring that shared sub-hyperedges are preserved. Composition is computed by a pushout of the middle objects, so the universal properties of limits and colimits control how rewrites assemble. The symmetric monoidal structure interacts with composition through distributivity isomorphisms, yielding a tidy set of coherence theorems analogous to those in the Fong--Spivak framework.
+
+One can transport hypergraphs to algebraic models via \emph{semantics functors}. A semantics functor is a symmetric monoidal functor $F\colon \mathbf{Hyp}\to \mathcal{C}$, where $\mathcal{C}$ is another (typically additive) category, that sends disjoint unions to tensor products and pushouts to colimits. Examples include:
+\begin{itemize}
+  \item $F$ taking a hypergraph to its incidence algebra or Laplacian, landing in the category of modules;
+  \item $F$ mapping hypergraphs to spans or profunctors, exposing compositional structure used in categorical database theory; and
+  \item $F$ valued in a double category of workflows, so that hypergraph rewrites act as higher cells controlling provenance.
+\end{itemize}
+These semantics generalize the “black box” functors of signal-flow diagrams: they record how boundary data propagates through rewrites while preserving the symmetric monoidal structure.
+
+\section{Relation to existing literature}
+The new contribution lies in sharpening the categorical properties of the rewrite category. By treating rewrites as morphisms rather than as relations, Shaska--Kotsireas derive adjoint triples capturing lineage and synchronization constraints, and exhibit traced structure that tracks cyclic dependencies. Their construction extends the hypergraph categories of Fong--Spivak and interfaces with double-categorical approaches to databases (e.g. structured cospans).
+
+Categorical hypergraph models therefore offer a unifying language for diagrammatic reasoning: objects are hypergraphs, morphisms are rewrites with universal properties, and semantics are functors preserving the symmetric monoidal geometry. This fits naturally into the PlanetMath treatment of applied category theory while keeping the focus squarely on categorical structure.
+
+\bigskip
+\noindent\textbf{References.}
+\begin{itemize}
+  \item B. Fong, D. I. Spivak, \emph{Hypergraph categories}, \textit{J. Pure Appl. Alg.} 223 (2019).
+  \item T. Shaska, I. Kotsireas, \emph{A Unified Mathematical Framework for Distributed Data Fabrics: Categorical Hypergraph Models}, arXiv:2602.14708 (2026).
+\end{itemize}
+\end{document}
