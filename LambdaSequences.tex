@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LambdaSequences}
+\pmcreated{2026-02-27 22:10:00}
+\pmmodified{2026-02-27 22:10:00}
+\pmowner{codex}{00000}
+\pmmodifier{codex}{00000}
+\pmtitle{$\Lambda$-sequences and the Kelly monoidal structure}
+\pmrecord{11}{999999}
+\pmprivacy{1}
+\pmauthor{codex}{00000}
+\pmtype{Topic}
+\pmclassification{msc}{18D50}
+\pmdefines{$\Lambda$-sequence}
+\pmdefines{Kelly tensor product}
+\pmdefines{unital operad module}
+
+\endmetadata
+
+\usepackage{amsmath, amssymb, amsfonts}
+
+\newcommand{\bLambda}{\mathbf{\Lambda}}
+
+\begin{document}
+\section{$\Lambda$-sequences}
+Let $\bLambda$ be the category of based finite sets $\mathbf{n}=\{0,1,\dots ,n\}$ with basepoint $0$, and basepoint-preserving injections. A \emph{$\Lambda$-sequence} is a functor $X\colon \bLambda\to \mathbf{Set}$ (or to another base monoidal category). The assignment $n\mapsto X(\mathbf{n})$ packages the data of a symmetric sequence while retaining the combinatorics of partial injections that appear in operad theory.
+
+Kelly observed that the Day convolution construction endows the functor category $[\bLambda,\mathbf{Set}]$ with a closed symmetric monoidal structure. For $X,Y\in [\bLambda,\mathbf{Set}]$ the \emph{Kelly tensor product} is given by
+\[
+  (X\otimes_{\mathrm{Kelly}} Y)(\mathbf{n}) \;=\; \int^{\mathbf{p},\mathbf{q}} \bLambda(\mathbf{p}\sqcup \mathbf{q},\mathbf{n})\times X(\mathbf{p})\times Y(\mathbf{q}),
+\]
+where $\sqcup$ denotes the based sum and the coend runs over pairs of based injections. This tensor product refines the usual composition product on symmetric sequences: it remembers how the inputs belong to disjoint pointed pieces rather than merely to a set with $|\mathbf{p}|+|\mathbf{q}|$ elements.
+
+\section{Monoids and modules}
+The recent work of Fan and Zou (arXiv:2602.12738) revisits the Kelly tensor product in order to characterize monoids and modules internal to $\Lambda$-sequences. A monoid for $\otimes_{\mathrm{Kelly}}$ is shown to be precisely a \emph{unital operad}: the multiplication encodes insertion along based injections, and the unit recovers the operadic degeneracy given by the distinguished element in $\mathbf{1}$. Modules over such monoids correspond to unital operad modules, and their lax morphisms detect the “$\Lambda$-equivariant” structure that is invisible to the usual species formalism.
+
+The paper also analyses commutativity phenomena. Although the Kelly tensor product is symmetric, monoids can satisfy stronger conditions (for example, being braided or laxly commutative) that reflect how different subsets of inputs commute. These refinements control the behaviour of $\Lambda$-modules and lead to model-categorical applications such as rectification of $\Gamma$-spaces and comparisons with $\infty$-operads.
+
+\section{Outlook}
+Describing operads and their modules as monoids and modules in $[\bLambda,\mathbf{Set}]$ brings the general machinery of enriched monoidal categories to bear on classical constructions. The Kelly tensor product makes it possible to formulate universal properties, compute ends/coends, and transfer structures by left Kan extension. This approach clarifies how notions such as units, degeneracies, and lax symmetries appear at the categorical level, while remaining compatible with more familiar descriptions of operads.
+
+\bigskip
+\noindent\textbf{Reference.}
+A. Fan, F. Zou, \emph{On the Kelly monoidal structure of $\Lambda$-sequences and unital operads}, arXiv:2602.12738 (2026).
+\end{document}
