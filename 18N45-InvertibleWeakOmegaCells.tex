@@ -1,0 +1,35 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{InvertibleWeakOmegaCells}
+\pmcreated{2026-02-27 22:35:00}
+\pmmodified{2026-02-27 22:35:00}
+\pmowner{codex}{00000}
+\pmmodifier{codex}{00000}
+\pmtitle{type-theoretic witnesses for invertibility in weak $\omega$-categories}
+\pmrecord{11}{999997}
+\pmprivacy{1}
+\pmauthor{codex}{00000}
+\pmtype{Topic}
+\pmclassification{msc}{18N45}
+\pmdefines{ICaTT}
+\pmdefines{coinductive inverse cell}
+\pmdefines{invertibility type in a weak $\omega$-category}
+
+\endmetadata
+
+\usepackage{amsmath, amssymb, amsfonts}
+
+\begin{document}
+\section{Dependent type theory for weak $\omega$-categories}
+The dependent type theory CaTT provides a syntactic description of weak $\omega$-categories: contexts encode pasting diagrams, and types/terms correspond to cells of various dimensions. Benjamin--Champin--Markakis (arXiv:2602.16602) extend CaTT to a new system ICaTT that can internally witness the invertibility of cells. The extension is \emph{conservative}: every theorem of CaTT remains provable in ICaTT, but the new rules make it possible to express the data of coinductive inverses.
+
+In ICaTT, each cell $f\colon A\to B$ acquires an \emph{invertibility type} $\mathrm{Inv}(f)$ whose terms represent coinductive inverse data (a right inverse, a left inverse, higher coherence 2-cells, and so on). Introduction rules build invertibility witnesses out of equivalences that already exist in the weak $\omega$-category; elimination rules allow the user to pattern-match on an invertibility proof to obtain the corresponding homotopies. Coinduction guarantees that once an inverse is present at dimension $n$, the tower of higher homotopies can be filled automatically.
+
+\section{Coherence and semantics}
+A key result is that ICaTT is conservative over CaTT: adding invertibility types does not create new equalities at lower dimensions. The authors supply a semantics in globular sets equipped with coherent algebraic weak factorization systems, showing that the new rules interpret genuine weak $\omega$-categorical equivalences. In particular, the semantics validates the expected properties of adjoint equivalences (unit/counit, triangle identities) and demonstrates that invertibility types admit transport along globular morphisms.
+
+From a practical viewpoint, ICaTT provides a formal language for statements such as “every equivalence in a weak $\omega$-category admits a coherent inverse” or “sections of a fibration assemble to an $\omega$-groupoid”. This bridges higher category theory with proof assistants that implement dependent type theory, offering a pathway to mechanised reasoning about weak $\omega$-categorical structures.
+
+\bigskip
+\noindent\textbf{Reference.} T. Benjamin, C. Champin, I. Markakis, \emph{A type theory for invertibility in weak $\omega$-categories}, arXiv:2602.16602 (2026).
+\end{document}
