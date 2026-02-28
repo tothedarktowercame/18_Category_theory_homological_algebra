@@ -30,3 +30,8 @@ For $\mathcal{C}=\mathrm{Prof}$ and $\mathcal{M}$ the class of discrete fibratio
   \item MO/Math.SE embeddings: retrieved from \texttt{storage/mo-processed-gpu} and \texttt{storage/math-processed-gpu} via their thread identifiers to power cross-links inside the encyclopedia runtime.
   \item PlanetMath export: this \TeX\ file is now the authoritative encyclopedia entry; the corresponding EDN fragment should mirror the structure of the sections above.
 \end{itemize}
+\subsection*{Batch 6 linkage}
+\begin{itemize}
+  \item This entry anchors the next PlanetMath CT batch, so we cross-reference the upcoming proposals for arXiv:2602.01292, 2602.02218, 2602.03149, and 2602.04049 when wiring the encyclopedia graph.
+  \item Duplicate checks relied on grepping \texttt{docs/proposals/} because \texttt{pm-full-dictionary.json} is not available on this machine.
+\end{itemize}
