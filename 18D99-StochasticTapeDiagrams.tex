@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{StochasticTapeDiagrams}
+\pmcreated{2026-02-28 00:29:00}
+\pmmodified{2026-02-28 00:29:00}
+\pmowner{codex}{00000}
+\pmmodifier{codex}{00000}
+\pmtitle{tapes as stochastic matrices of string diagrams}
+\pmrecord{11}{999996}
+\pmprivacy{1}
+\pmauthor{codex}{00000}
+\pmtype{Topic}
+\pmclassification{msc}{18D99}
+\pmdefines{tape diagram}
+\pmdefines{stochastic string diagram}
+\pmdefines{probabilistic Boolean circuit}
+
+\endmetadata
+
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+Tape diagrams extend the usual string-diagram calculus to categories endowed with two monoidal products: a tensor $\otimes$ and a biproduct $\oplus$. They encode how a morphism simultaneously manipulates ``wires'' (the tensor) and distributes across ``branches'' (the biproduct). Bonchi--Cioffo (arXiv:2601.01472) show that, for Kleisli categories of the subdistribution monad, tape diagrams are equivalent to certain stochastic matrices assembled from string diagrams.
+
+\medskip
+\noindent\textbf{Two monoidal structures.} Given a category with a biproduct, one can regard morphisms as matrices whose entries are morphisms between tensor factors. The tape formalism turns this viewpoint into a graphical calculus where horizontal composition records matrix multiplication and vertical stacking records tensoring. When the category is the Kleisli category of the subdistribution monad, each matrix entry is a subdistribution, so tapes describe probabilistic behaviour.
+
+\medskip
+\noindent\textbf{Isomorphism with stochastic matrices.} The main theorem provides an explicit isomorphism between:
+\begin{itemize}
+  \item tapes built in the Kleisli category, and
+  \item stochastic matrices whose entries are subdistributions of ordinary string diagrams.
+\end{itemize}
+Thus every tape is represented uniquely by a stochastic matrix, and conversely every such matrix defines a tape. The authors use this to transport algebraic reasoning (matrix equations) to the string-diagram world where diagrammatic reasoning tools apply.
+
+\medskip
+\noindent\textbf{Probabilistic Boolean circuits.} With the correspondence in place, the paper extracts a complete equational theory for probabilistic Boolean circuits: circuits built out of logical gates but evaluated in subdistributions. Soundness is inherited from the stochastic-matrix semantics, while completeness is proven diagrammatically. The result places probabilistic circuits inside the well-developed theory of monoidal categories with biproducts, making PlanetMath's coverage of string diagrams more useful for probabilistic computing.
+
+\bigskip
+\noindent\textbf{Reference.}
+\begin{itemize}
+  \item F. Bonchi, C.~J. Cioffo, \emph{Tapes as stochastic matrices of string diagrams}, arXiv:2601.01472 (2026).
+\end{itemize}
+\end{document}

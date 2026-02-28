@@ -1,0 +1,44 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{MinimalInitialFunctorLimits}
+\pmcreated{2026-02-28 00:25:00}
+\pmmodified{2026-02-28 00:25:00}
+\pmowner{codex}{00000}
+\pmmodifier{codex}{00000}
+\pmtitle{minimal initial functors for computing limits}
+\pmrecord{11}{999996}
+\pmprivacy{1}
+\pmauthor{codex}{00000}
+\pmtype{Topic}
+\pmclassification{msc}{18A30}
+\pmdefines{minimal initial functor}
+\pmdefines{generalized rank of a diagram}
+
+\endmetadata
+
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+A classical tactic for computing limits in a category $\mathcal D$ is to restrict a diagram $G\colon Q\to \mathcal D$ along an \emph{initial functor} $F\colon P\to Q$. The restriction $G\circ F$ has the same limit as $G$, but can often be evaluated with fewer objects and morphisms. Dey--Lesnick (arXiv:2601.00209) study this technique for diagrams indexed by finite posets, emphasizing algorithmic aspects that are crucial in applied settings such as multiparameter persistence.
+
+\medskip
+\noindent\textbf{Minimal initial functors.} Fix a finite poset $Q$. An initial functor $F\colon P\to Q$ is called \emph{minimal} if $P$ has the smallest possible numbers of objects and morphisms among all sources of initial functors with codomain $Q$. The paper shows that when $Q$ is a finite poset (and in particular when it is an interval inside $\mathbb N^d$), every minimal initial functor is realized by a subposet inclusion. Moreover:
+\begin{itemize}
+  \item When $Q\subseteq \mathbb N^d$ is an interval with $n$ minimal elements and $d\le 3$, the size of $P$ is $\Theta(n)$.
+  \item For $d>3$ one needs $\Theta(n^2)$ objects in the worst case.
+  \item There are efficient algorithms that, given $Q$, construct an explicit minimal inclusion $P\hookrightarrow Q$.
+\end{itemize}
+The authors work entirely with combinatorial models, so one can track the precise cost of each restriction step.
+
+\medskip
+\noindent\textbf{Applications to limit computation.} Suppose $G\colon Q\to \mathbf{Vec}$ lands in vector spaces. Restricting along a minimal initial inclusion $F$ gives a diagram $G\circ F$ indexed by a much smaller poset while keeping the same limit. The paper bounds the number of arithmetic operations needed to compute $\lim G$ in terms of $|P|$ and the dimension vector of $G$, and refines these bounds when $Q$ is connected. They also analyze the \emph{generalized rank} of $G$, namely the rank of the canonical morphism $\lim G\to \mathrm{colim}\,G$, which is important in persistent homology; the minimality of $F$ yields asymptotically sharp complexity estimates for this computation as well.
+
+\medskip
+These results situate initial functors at the heart of constructive limit computation: not only are they a conceptual tool, but when chosen optimally they translate directly into running-time statements for multiparameter persistence algorithms.
+
+\bigskip
+\noindent\textbf{Reference.}
+\begin{itemize}
+  \item T.~K. Dey, M. Lesnick, \emph{Limit computation over posets via minimal initial functors}, arXiv:2601.00209 (2026).
+\end{itemize}
+\end{document}

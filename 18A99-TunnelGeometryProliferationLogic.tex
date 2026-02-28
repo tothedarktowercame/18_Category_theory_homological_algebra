@@ -1,0 +1,45 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{TunnelGeometryProliferationLogic}
+\pmcreated{2026-02-28 00:27:00}
+\pmmodified{2026-02-28 00:27:00}
+\pmowner{codex}{00000}
+\pmmodifier{codex}{00000}
+\pmtitle{tunnel geometry and proliferation logic}
+\pmrecord{11}{999996}
+\pmprivacy{1}
+\pmauthor{codex}{00000}
+\pmtype{Topic}
+\pmclassification{msc}{18A99}
+\pmdefines{tunnel geometry}
+\pmdefines{proliferation logic}
+\pmdefines{Lawvere metric equivalence}
+
+\endmetadata
+
+\usepackage{amsmath, amssymb}
+
+\begin{document}
+Some categorical frameworks attempt to encode ``locality'' without assuming an a priori space of points. Two such proposals---\emph{Tunnel Geometry} and \emph{Proliferation Logic}---were developed independently, but Sukhov (arXiv:2601.00803) shows that they are in fact two syntactic descriptions of the same structure.
+
+\medskip
+Tunnel Geometry packages ``regions'' and their refinements into a frame equipped with a Lawvere metric that records how refinement depth accumulates. Proliferation Logic, on the other hand, is phrased in proof-theoretic terms: its models track stability of inference under refinement of contexts. Both carry a canonical category of ultrafilters, and both admit Laplacian operators that measure how quickly refinement stabilizes.
+
+\medskip
+The paper proves that each theory can be interpreted as a frame $\mathcal F$ equipped with:
+\begin{itemize}
+  \item its space $\mathrm{Ult}(\mathcal F)$ of ultrafilters,
+  \item a Lawvere metric compatible with the frame operations, and
+  \item structure maps relating Laplacians to refinement paths.
+\end{itemize}
+In this common environment the author constructs explicit functors that send a tunnel space to its corresponding proliferative logic model and vice versa. These functors are inverse on the nose, so the equivalence of categories is strict rather than up to natural isomorphism.
+
+\medskip
+A notable by-product is that the Laplacian operators associated with the two languages become unitarily equivalent under this functorial identification. Thus the ``geometric'' (tunnel) and ``logical'' (proliferation) perspectives are not competing models, but complementary views of a single categorical ontology where locality emerges from refinement dynamics. This PlanetMath entry records the categorical shape of that equivalence for reference within applied and structural category theory.
+
+\bigskip
+\noindent\textbf{Reference.}
+\begin{itemize}
+  \item D. Sukhov, \emph{Tunnel geometry and proliferation logic: a strict categorical equivalence}, arXiv:2601.00803 (2025).
+\end{itemize}
+\end{document}
