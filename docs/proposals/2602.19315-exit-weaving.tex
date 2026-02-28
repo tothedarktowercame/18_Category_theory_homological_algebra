@@ -7,7 +7,7 @@
   \item StackExchange cross-links via storage/mo-processed-gpu + math-processed-gpu
 \end{itemize}
 \subsection*{Synopsis}
-Exit weaving enriches the exit-path $\infty$-groupoid of a stratified space by decorating every stratum with a span-valued transport rule. The authors:
+Exit weaving enriches the exit-path $\infty$-groupoid of a stratified space by decorating every stratum with a span-valued transport rule. Unlike the \emph{factorization-weaves} proposal (arXiv:2602.19172 in PR \#12), which lives at the level of stratified $(\infty,1)$-topoi, this entry is organized around constructible stacks and perverse schober classifications; we will cross-link the two PlanetMath pages so readers see precisely how the stack-level refinements build on the topoi-level story. The authors:
 \begin{enumerate}
   \item build an explicit \emph{weave nerve} $\mathcal{W}(X)$ from iterated spans in $\mathrm{Span}_2(\mathrm{Exit}(X))$;
   \item construct factorization charts on constructible stacks by gluing the local weaves along tangential smoothings;
@@ -27,16 +27,17 @@ PlanetMath emphasis: translate the weave dictionary into existing entries on exi
 \end{description}
 \subsection*{Encyclopedia outline}
 \begin{enumerate}
-  \item \textbf{Background.} Recall $\mathrm{Exit}(X)$ and the span formalism used in MO 467375.
-  \item \textbf{Definition of exit weaving.} Present the weave nerve $\mathcal{W}(X)$ together with its transport functor.
+  \item \textbf{Background + comparison.} Recall $\mathrm{Exit}(X)$, summarize the stratified-topos viewpoint from 2602.19172, and delineate what the stack/perverse-schober focus adds so the entries do not duplicate one another.
+  \item \textbf{Definition of exit weaving.} Present the weave nerve $\mathcal{W}(X)$ together with its transport functor and record how it enhances the factorization-weave construction.
   \item \textbf{Factorization charts.} Explain how weaves control factorization homology and relate to Math.SE 482764.
-  \item \textbf{Classification theorem.} State the correspondence between weaves and perverse schober data, referencing the cosheaf proof.
-  \item \textbf{Example.} Work through the stratified $3$-manifold example and link to Math.SE 480112 for computations.
+  \item \textbf{Classification theorem.} State the correspondence between weaves and perverse schober data, referencing the cosheaf proof and MO 467375.
+  \item \textbf{Worked example + data pipeline.} Work through the stratified $3$-manifold example, link to Math.SE 480112, and spell out which MO threads provide input data for the transport rules.
 \end{enumerate}
 \subsection*{Action items}
 \begin{itemize}
   \item Sync the arXiv source into futon6 proof-state for citation harvesting.
   \item Pull embeddings for MO 467375 and MO 466359 via storage/mo-processed-gpu.
   \item Fetch Math.SE embeddings for 480112 and 482764 via storage/math-processed-gpu.
+  \item Cross-reference the factorization-weaves proposal so shared introductory text lives there while stack-specific details stay here.
   \item Draft the PlanetMath EDN + TeX pair following the expanded outline.
 \end{itemize}
