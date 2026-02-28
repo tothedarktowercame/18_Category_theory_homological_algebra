@@ -1,0 +1,40 @@
+% PlanetMath proposal draft for arXiv:2602.16602
+% Source corpora: arXiv math.CT eprints, storage/mo-processed-gpu, storage/math-processed-gpu
+\section*{Type theory for invertibility in weak $\omega$-categories}
+\subsection*{Source}
+\begin{itemize}
+  \item arXiv:2602.16602, "A type theory for invertibility in weak $\omega$-categories" (2026-02-18)
+  \item StackExchange cross-links via storage/mo-processed-gpu + math-processed-gpu
+\end{itemize}
+\subsection*{Synopsis}
+Benjamin, Champin, and Markakis extend CaTT with a type witnessing coinductive invertibility (ICaTT). The theory describes the walking equivalence, characterizes $\omega$-equifibrations via substitutions, and yields semantics in marked weak $\omega$-categories where every model induces a fibrant marked $\omega$-category.
+\begin{enumerate}
+  \item adds invertibility types to CaTT and records inference rules;
+  \item models the walking equivalence context and maps detecting $\omega$-equifibrations;
+  \item implements ICaTT to formalize basic lemmas about invertible cells; and
+  \item constructs fibrant marked $\omega$-categories from ICaTT models.
+\end{enumerate}
+\subsection*{MathOverflow cues}
+\begin{description}
+  \item[MO 468520] Question on adding invertibility witnesses to CaTT-like theories.
+  \item[MO 468548] Thread about marked $\omega$-categories and equifibration maps.
+\end{description}
+\subsection*{Math.SE anchors}
+\begin{description}
+  \item[Math.SE 507918] "Semantics of ICaTT vs. CaTT".
+  \item[Math.SE 507990] "Walking equivalence in weak $\omega$-categories".
+\end{description}
+\subsection*{Encyclopedia outline}
+\begin{enumerate}
+  \item \textbf{CaTT recap.} Summarize the existing type theory and cite Math.SE 507918.
+  \item \textbf{Invertibility extension.} Detail the new types/rules (MO 468520).
+  \item \textbf{Walking equivalence + equifibrations.} Explain the characterization and relate to Math.SE 507990.
+  \item \textbf{Semantics in marked $\omega$-categories.} Outline the fibrant construction (MO 468548).
+  \item \textbf{Implementation notes.} Mention the formalization and future PlanetMath entries linking to higher-type theories.
+\end{enumerate}
+\subsection*{Action items}
+\begin{itemize}
+  \item Import the arXiv source for rules/examples.
+  \item Pull MO embeddings (468520, 468548) and Math.SE embeddings (507918, 507990).
+  \item Draft the PlanetMath article referencing higher-category and type-theory pages.
+\end{itemize}
