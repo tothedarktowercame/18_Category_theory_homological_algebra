@@ -7,34 +7,36 @@
   \item StackExchange cross-links via storage/mo-processed-gpu + math-processed-gpu
 \end{itemize}
 \subsection*{Synopsis}
-The paper refines exit-path constructions for constructible stacks by introducing exit weaving data that records tangential smoothing across strata:
+Exit weaving enriches the exit-path $\infty$-groupoid of a stratified space by decorating every stratum with a span-valued transport rule. The authors:
 \begin{enumerate}
-  \item define exit weaves as iterated spans of exit-path $\infty$-categories,
-  \item use the weaves to build factorization charts on constructible stacks, and
-  \item classify perverse schobers via the resulting span correspondences.
+  \item build an explicit \emph{weave nerve} $\mathcal{W}(X)$ from iterated spans in $\mathrm{Span}_2(\mathrm{Exit}(X))$;
+  \item construct factorization charts on constructible stacks by gluing the local weaves along tangential smoothings;
+  \item prove that perverse schobers are classified by locally constant modules over $\mathcal{W}(X)$; and
+  \item supply detection criteria (using exit-path monodromy) that decide when a weave is trivial.
 \end{enumerate}
-PlanetMath focus: translate the new jargon into the PlanetMath dictionary, present a stratified 3-manifold example, and describe how span symmetries enforce compatibilities.
+PlanetMath emphasis: translate the weave dictionary into existing entries on exit-path $\infty$-categories, and document an explicit stratified $3$-manifold computation influenced by MO 467375 + Math.SE 480112.
 \subsection*{MathOverflow cues}
 \begin{description}
-  \item[MO 467375] Constructible cosheaf discussion referencing exit-path spans.
-  \item[MO 466359] Higher graph-coloring spans that mirror the weaving excision data.
+  \item[MO 467375] Constructible cosheaf discussion referencing exit-path spans; rephrased inside the definition section.
+  \item[MO 466359] Higher graph-coloring spans that mirror how weaves capture excision constraints.
 \end{description}
 \subsection*{Math.SE anchors}
 \begin{description}
-  \item[Math.SE 480112] "Exit-path $\infty$-groupoid of a cone" for a warm-up.
-  \item[Math.SE 482764] "Factorization homology on a stratified sphere" to illustrate excision.
+  \item[Math.SE 480112] "Exit-path $\infty$-groupoid of a cone" — supplies the local model used in the example.
+  \item[Math.SE 482764] "Factorization homology on a stratified sphere" — motivates the excision paragraph.
 \end{description}
 \subsection*{Encyclopedia outline}
 \begin{enumerate}
-  \item Review exit-path $\infty$-categories and constructible stacks.
-  \item Define exit weaving and relate it to span correspondences.
-  \item Explain the classification theorem for schobers.
-  \item Work through the stratified 3-manifold example and cite MO/Math.SE.
+  \item \textbf{Background.} Recall $\mathrm{Exit}(X)$ and the span formalism used in MO 467375.
+  \item \textbf{Definition of exit weaving.} Present the weave nerve $\mathcal{W}(X)$ together with its transport functor.
+  \item \textbf{Factorization charts.} Explain how weaves control factorization homology and relate to Math.SE 482764.
+  \item \textbf{Classification theorem.} State the correspondence between weaves and perverse schober data, referencing the cosheaf proof.
+  \item \textbf{Example.} Work through the stratified $3$-manifold example and link to Math.SE 480112 for computations.
 \end{enumerate}
 \subsection*{Action items}
 \begin{itemize}
   \item Sync the arXiv source into futon6 proof-state for citation harvesting.
   \item Pull embeddings for MO 467375 and MO 466359 via storage/mo-processed-gpu.
   \item Fetch Math.SE embeddings for 480112 and 482764 via storage/math-processed-gpu.
-  \item Draft the PlanetMath EDN + TeX pair per outline.
+  \item Draft the PlanetMath EDN + TeX pair following the expanded outline.
 \end{itemize}
