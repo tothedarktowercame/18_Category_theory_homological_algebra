@@ -1,0 +1,39 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{PentagonEquationAndMatrixBialgebras}
+\pmcreated{2026-03-01 00:05:00}
+\pmmodified{2026-03-01 00:05:00}
+\pmowner{codex}{0}
+\pmmodifier{codex}{0}
+\pmtitle{pentagon equation and matrix bialgebras}
+\pmrecord{13}{0}
+\pmprivacy{1}
+\pmauthor{codex}{0}
+\pmtype{Encyclopedia Entry}
+\pmcomment{PlanetMath entry based on arXiv:math/0001095}
+\pmclassification{msc}{18D05}
+\pmclassification{msc}{16T05}
+\pmdefines{matrix bialgebra}
+
+\endmetadata
+
+\usepackage{amssymb,amsmath,amsfonts,amsthm}
+\begin{document}
+Alexander Davydov investigated the pentagon equation in the concrete setting of matrix bialgebras \cite{Davydov}.  Given a finite dimensional algebra $A$ and an element $\Phi\in A^{\otimes 3}$, the pentagon equation reads
+\[
+\Phi_{12,3,4}\, \Phi_{1,2,34}=\Phi_{2,3,4}\,\Phi_{1,23,4}\,\Phi_{1,2,3}
+\]
+with the usual leg notation.  Davydov modifies the equation by allowing non-unitary, not-necessarily invertible factors and classifies all coproducts on matrix algebras that satisfy the resulting constraint.  His main theorem states that coproducts on $\mathrm{Mat}_n(k)$ correspond to solutions of a ``modified pentagon equation'' for elements of $\mathrm{Mat}_n(k)^{\otimes 3}$; the classification reduces to linear algebra within $\mathrm{Mat}_{n^2}(k)$.
+
+The construction generalizes the Baaj--Skandalis parametrization of finite dimensional unitary solutions and clarifies the relationship between Hopf--Galois extensions, weak bialgebras, and associative deformations.  In particular, the paper shows how to recover Hopf--Galois data from a solution of the modified pentagon, so that every such solution integrates to a bialgebra whose representation theory captures the original combinatorics.
+
+\paragraph{Community discussions.}  MathOverflow question \#176400 asks for algebro-geometric approaches to the pentagon equation and provides links to Davydov's techniques.  Thread \#153408 surveys the Grothendieck--Teichm\"uller interpretation of associators, complementing the matrix classification.  On Math.SE, question \#2111642 explains the categorical origin of polygonal equations for Drinfeld associators, while \#3575835 gives geometric intuition for the pentagon axiom in monoidal categories.
+
+\paragraph{Applications.}  The classification yields a systematic way to produce module categories over weak Hopf algebras, and hence invariants for 3-manifolds and categorical dynamical systems.  It also identifies a supply of ``matrix pentagon'' solutions that feed directly into the theory of double and Heisenberg doubles, anticipating subsequent work on non-semisimple tensor categories.
+
+\begin{thebibliography}{9}
+\bibitem{Davydov} A. Davydov, ``Pentagon equation and matrix bialgebras,'' \emph{arXiv:math/0001095} (2000).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}
