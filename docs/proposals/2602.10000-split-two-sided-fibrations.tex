@@ -1,0 +1,43 @@
+% PlanetMath proposal draft for arXiv:2602.10000
+% Source corpora: arXiv math.CT eprints, storage/mo-processed-gpu, storage/math-processed-gpu
+\section*{Split two-sided 2-fibrations and virtual double categories}
+\subsection*{Source}
+\begin{itemize}
+  \item arXiv:2602.10000, ``Virtual double categories of split two-sided 2-fibrations'' (February 2026)
+  \item MathOverflow discussions on 2-fibrations, Yoneda structures, and lax functors (IDs 391750, 360802)
+  \item Math.StackExchange threads on double categories and lax monoidal functors (IDs 2592352, 1849761)
+\end{itemize}
+\subsection*{Synopsis}
+Koudenburg generalizes Street's split two-sided fibrations to the setting of sesquicategories and packages them into a virtual double category $\SpTwoTwoFib$. The paper builds a Grothendieck correspondence between locally discrete split two-sided $2$-fibrations and pseudofunctors, studies Yoneda morphisms in this double setting, and recovers Buckley--Lambert correspondences as special cases. Additional structure (locally discrete fibers, lax natural transformations) enables the author to treat Grothendieck constructions as algebraic Yoneda embeddings inside $\SpTwoTwoFib$ and extend them to monoidal two-sided fibrations.
+\begin{enumerate}
+  \item Defines split two-sided $2$-fibrations internal to sesquicategories and sets up the augmented virtual double category $\inSpTwoFib{\s}$ for such fibrations.
+  \item Constructs $\SpTwoTwoFib$ and its locally discrete sub-virtual double category, proving that representable 2-functors $\yon\colon A\to\Cat^{\op A}$ become formal Yoneda morphisms therein.
+  \item Establishes a ``two-sided Grothendieck correspondence'' between locally discrete split two-sided $2$-fibrations $A\brar B$ and $2$-functors $B\to\Cat^{\op A}$ plus monoidal refinements obtained via algebraic Yoneda embeddings.
+  \item Recovers and improves Buckley--Lambert's correspondence for op-$2$-fibrations (the $A=1$ case), clarifying functoriality and compatibility with monoidal structures.
+  \item Explores applications to lax natural transformations, double fibrations, and other fibration-like notions that can be encoded in the same formal framework.
+\end{enumerate}
+\subsection*{MathOverflow cues}
+\begin{description}
+  \item[MO 391750] Clarifies how 2-fibrations can be described in terms of comma constructions; useful for motivating the $A^\twoheadrightarrow B$ internal definitions.
+  \item[MO 360802] Surveys when 2-categorical constructions preserve Yoneda structures, echoing the paper's emphasis on formal Yoneda morphisms in virtual double categories.
+\end{description}
+\subsection*{Math.SE anchors}
+\begin{description}
+  \item[Math.SE 2592352] Reference request for double categories of monoidal categories---useful for explaining how virtual double categories generalize strict double constructions.
+  \item[Math.SE 1849761] Compares definitions of double categories, highlighting the need for the flexible multicellular framework employed in $\SpTwoTwoFib$.
+\end{description}
+\subsection*{Encyclopedia outline}
+\begin{enumerate}
+  \item Overview of split two-sided $2$-fibrations internal to sesquicategories.
+  \item Construction of $\SpTwoTwoFib$ and its locally discrete part.
+  \item Formal Yoneda morphisms and the two-sided Grothendieck correspondence.
+  \item Monoidal refinements and comparison with op-$2$-fibrations of Buckley--Lambert.
+  \item Applications and variants (virtual double categories of double fibrations, lax natural transformations, other fibration-like notions).
+\end{enumerate}
+\subsection*{Action items}
+\begin{itemize}
+  \item Translate the definitions of split two-sided $2$-fibrations and their morphisms into PlanetMath style, with schematic diagrams referencing $\inSpTwoFib{\s}$.
+  \item Summarize the Grothendieck correspondence proof, emphasizing how Yoneda morphisms encode universal properties.
+  \item Cross-reference related PlanetMath entries on Grothendieck fibrations, bicategories, monoidal adjunctions, and lax natural transformations.
+  \item Illustrate special cases ($A=1$, monoidal double fibrations) to connect with existing encyclopedia articles on opfibrations and double categories.
+\end{itemize}

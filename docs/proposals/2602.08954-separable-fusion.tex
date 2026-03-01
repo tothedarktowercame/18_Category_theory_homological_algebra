@@ -1,0 +1,38 @@
+% PlanetMath proposal draft for arXiv:2602.08954
+% Source corpora: arXiv math.CT eprints, storage/mo-processed-gpu, storage/math-processed-gpu
+\section*{Separable tensor functors and equivalent definitions of fusion categories}
+\subsection*{Source}
+\begin{itemize}
+  \item arXiv:2602.08954, Zhenbang Zuo, ``Equivalent definitions of fusion category arising from separability'' (2026-02-18)
+  \item Cross-reference MO 213035 on semisimple rigid monoidal categories; Math.SE 4349127 on abelian/fusion category criteria
+\end{itemize}
+\subsection*{Synopsis}
+Zuo studies semisimple multiring categories with left duals and shows that the simplicity of the unit object is equivalent to separability (or faithfulness/Maschke-type properties) of tensoring with any non-zero algebra. The paper establishes:
+\begin{enumerate}
+  \item In a semisimple multiring category, $1$ is simple iff $-\otimes A$ is separable (equivalently faithful, Maschke, dual Maschke, or conservative) for every non-zero algebra $A$.
+  \item Component subcategory analysis ($\mathcal{C} = \bigoplus_{i,j}\mathcal{C}_{ij}$) relates algebra objects to subsets $J$ of components, giving structural control over weak Hopf algebras.
+  \item Applications transfer simplicity between unit objects, module categories, and Grothendieck rings, refining MO 213035 and Math.SE 4349127 criteria.
+\end{enumerate}
+\subsection*{MathOverflow cues}
+\begin{description}
+  \item[MO 213035] queries when a semisimple rigid monoidal category behaves like a fusion category; separability of $-\otimes A$ furnishes a new criterion.
+\end{description}
+\subsection*{Math.SE anchors}
+\begin{description}
+  \item[Math.SE 4349127] discusses when a semisimple tensor category is automatically fusion; Zuo’s equivalences offer concrete tests.
+\end{description}
+\subsection*{Encyclopedia outline}
+\begin{enumerate}
+  \item \textbf{Multiring and fusion categories.} Recall definitions, component decompositions, and left duals.
+  \item \textbf{Separable tensor functors.} Summarize Maschke, dual Maschke, conservative, and semiseparable notions for $-\otimes A$.
+  \item \textbf{Main equivalence.} State the theorem tying simplicity of the unit to separability properties; sketch proof via component algebra analysis.
+  \item \textbf{Applications.} Weak Hopf algebras, transfer of simplicity, indecomposable module categories, Grothendieck ring consequences.
+  \item \textbf{Comparisons.} Link to MO 213035 and Math.SE 4349127 discussions on recognizing fusion categories.
+\end{enumerate}
+\subsection*{Action items}
+\begin{itemize}
+  \item Verify in \texttt{pm-full-dictionary.json} whether ``fusion category'' or ``separable functor'' entries exist; plan cross-links.
+  \item Extract explicit statements of the Maschke/dual Maschke equivalences for PlanetMath style proofs.
+  \item Collect representative examples (weak Hopf algebras, module categories) illustrating the component subset $J$ construction.
+  \item Document how tensor functor separability interacts with Grothendieck rings and reference existing PlanetMath entries on Hopf algebras.
+\end{itemize}

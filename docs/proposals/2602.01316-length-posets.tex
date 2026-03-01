@@ -1,0 +1,38 @@
+% PlanetMath proposal draft for arXiv:2602.01316
+% Source corpora: arXiv math.CT eprints, storage/mo-processed-gpu, storage/math-processed-gpu
+\section*{Ordnung muss sein: length categories from finite posets}
+\subsection*{Source}
+\begin{itemize}
+  \item arXiv:2602.01316, Henning Krause, ``Ordnung muss sein'' (2026-02-02)
+  \item Cross-reference MO 503272 on length categories in tensor settings; Math.SE 4025282 on quiver representations for posets
+\end{itemize}
+\subsection*{Synopsis}
+Krause isolates three combinatorial ``Hausordnung'' axioms on the center and Ext-quiver of a connected length category. Under these axioms every object admits a canonical filtration whose simples inherit a partial order, and the category is equivalent to finite-dimensional representations of that poset. The paper then compares the resulting length categories with incidence categories, highlights how central endomorphisms constrain extensions, and gives criteria for recovering the poset directly from Auslander--Reiten data. Key points:
+\begin{enumerate}
+  \item Necessary and sufficient order-theoretic conditions on Ext\textsuperscript{1} between simples force the category to be equivalent to $\mathrm{rep}_k(P)$ for a finite poset $P$.
+  \item Central endomorphisms act as ``coordinates''; controlling their eigenvalues reconstructs the incidence algebra.
+  \item Examples include stable module categories of finite tensor categories (cf.\ MO 503272) and length subcategories inside quiver moduli (cf.\ Math.SE 4025282).
+\end{enumerate}
+\subsection*{MathOverflow cues}
+\begin{description}
+  \item[MO 503272] asks when stable module categories of finite tensor categories stay length; Krause's axioms provide a conceptual explanation.
+\end{description}
+\subsection*{Math.SE anchors}
+\begin{description}
+  \item[Math.SE 4025282] reviews how poset representations embed into quiver categories, offering concrete examples for the Hausordnung axioms.
+\end{description}
+\subsection*{Encyclopedia outline}
+\begin{enumerate}
+  \item \textbf{Length categories.} Recall definition, role of center $Z(\mathcal{A})$, Ext-quiver, and Gabriel--Roiter hints.
+  \item \textbf{Hausordnung axioms.} State Krause's three rules and interpret them combinatorially.
+  \item \textbf{Equivalence with finite posets.} Sketch construction of the functor to $\mathrm{rep}_k(P)$; explain reconstruction of $P$.
+  \item \textbf{Examples and counterexamples.} Include tensor categories (MO 503272) and quiver/poset embeddings (Math.SE 4025282).
+  \item \textbf{Central control.} Discuss how central endomorphisms encode order structure and how Auslander--Reiten data detects it.
+\end{enumerate}
+\subsection*{Action items}
+\begin{itemize}
+  \item Scan \texttt{pm-full-dictionary.json} for existing entries titled ``length category'', ``poset representation'', or similar to avoid duplicates.
+  \item Distill Krause's axioms into PlanetMath-friendly formal statements with proofs/intuition.
+  \item Prepare figures for Ext-quivers satisfying/not satisfying Hausordnung.
+  \item Cross-link to existing PlanetMath articles on incidence algebras and quiver representations.
+\end{itemize}
