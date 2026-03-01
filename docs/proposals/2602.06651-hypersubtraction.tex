@@ -1,0 +1,38 @@
+% PlanetMath proposal draft for arXiv:2602.06651
+% Source corpora: arXiv math.CT eprints, storage/mo-processed-gpu, storage/math-processed-gpu
+\section*{Hypersubtraction and semi-direct indices in pointed categories}
+\subsection*{Source}
+\begin{itemize}
+  \item arXiv:2602.06651, Dominique Bourn, ``Hypersubtraction and semi-direct product'' (2026-02-13)
+  \item Cross-reference MO 24550 on semi-direct products in tensor categories; Math.SE 4552557 on uniqueness of semi-direct decompositions
+\end{itemize}
+\subsection*{Synopsis}
+Bourn develops an extrinsic notion of semi-direct index for split epimorphisms inside a pointed category $\mathcal{D}$. After introducing hypersubtraction and hyper-S{\l}omi\'nski settings (enriching quandles and prequandles), he shows that the forgetful functor $U:\mathcal{C}\to\mathcal{D}$ sends every split epimorphism to a canonical one if and only if $\mathcal{C}$ is protomodular. Highlights:
+\begin{enumerate}
+  \item Hypersubtraction encodes the ``difference'' between parallel arrows; it generalizes subtraction algebras associated with quandles and digroups.
+  \item Semi-direct indices detect when a split epimorphism is induced from a group action, extending MO 24550 themes to arbitrary pointed categories.
+  \item For left exact conservative functors, existence of a semi-direct index forces $\mathcal{C}$ to be protomodular, clarifying Math.SE 4552557-type uniqueness issues.
+\end{enumerate}
+\subsection*{MathOverflow cues}
+\begin{description}
+  \item[MO 24550] studies Tannakian-style semi-direct products; hypersubtraction provides a template for transporting those constructions beyond groups.
+\end{description}
+\subsection*{Math.SE anchors}
+\begin{description}
+  \item[Math.SE 4552557] asks when semi-direct decompositions are unique; Bourn’s semi-direct indices give categorical obstruction classes.
+\end{description}
+\subsection*{Encyclopedia outline}
+\begin{enumerate}
+  \item \textbf{Semi-direct index.} Define the notion for a split epimorphism and explain its behavior under pullback.
+  \item \textbf{Hypersubtraction and hyper-S{\l}omi\'nski data.} Present algebraic structures capturing extrinsic actions (prequandles, digroups, etc.).
+  \item \textbf{Characterization of protomodularity.} State and sketch the theorem: existence of semi-direct indices for $U$ implies $\mathcal{C}$ protomodular.
+  \item \textbf{Examples.} Groups, quandles, skew braces, and the pointed-set forgetful functor; compare with MO 24550.
+  \item \textbf{Obstructions and uniqueness.} Link to Math.SE 4552557: how semi-direct indices measure failure of uniqueness.
+\end{enumerate}
+\subsection*{Action items}
+\begin{itemize}
+  \item Check \texttt{pm-full-dictionary.json} for entries on ``semi-direct product'' and ``protomodular category'' to determine linking strategy.
+  \item Formalize definitions of hypersubtraction and hyperindexes suitable for PlanetMath notation.
+  \item Provide explicit computations in $\mathsf{Gp}$, $\mathsf{Qnd}$, and digroup categories illustrating the theory.
+  \item Summarize implications for conservative left exact functors and document connections to existing articles on Mal'tsev/protomodular categories.
+\end{itemize}
