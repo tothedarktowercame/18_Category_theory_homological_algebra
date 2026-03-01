@@ -1,0 +1,49 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{LeanCatBenchmark}
+\pmcreated{2026-03-01 17:50:00}
+\pmmodified{2026-03-01 17:50:00}
+\pmowner{codex}{0}
+\pmmodifier{codex}{0}
+\pmtitle{LeanCat: a benchmark for formal category theory}
+\pmrecord{0}{0}
+\pmprivacy{1}
+\pmauthor{codex}{0}
+\pmtype{Article}
+\pmclassification{msc}{18A99}
+\pmclassification{msc}{68V20}
+\pmrelated{ProofAssistant}
+\pmrelated{LeanTheoremProver}
+\pmrelated{AdjointFunctor}
+\pmdefines{LeanCat benchmark}
+
+\endmetadata
+
+\usepackage{amsmath,amssymb,amsfonts}
+
+\begin{document}
+\section*{Overview}
+\textsc{LeanCat} is a curated suite of formalization tasks designed to stress-test Lean's category-theory library (\texttt{mathlib}) together with language-model-guided automation.  Each task is a theorem statement written in Lean together with hints on the expected proof strategy.  The benchmark currently stores 208 tasks grouped into clusters: limits and colimits, adjunctions, monoidal structures, enriched categories, and higher categorical constructions.
+
+\section*{Dataset geometry}
+The tasks form a directed acyclic graph whose nodes are theorems and whose edges encode dependencies.  Each node carries:
+\begin{itemize}
+  \item the Lean level (a proxy for proof difficulty),
+  \item tags for the categorical notions involved, and
+  \item links to human-written reference proofs (when available).
+\end{itemize}
+The dependency graph is used to design curricula for autoformalization agents: a learner must solve prerequisite tasks before attempting harder ones.
+
+\section*{Automation baselines}
+The benchmark evaluates several strategies:
+\begin{description}
+  \item[LLM-guided tactics] combine large language models with Lean's tactic framework to synthesize proof scripts.
+  \item[Retrieval-augmented proving] retrieves structurally similar proofs and adapts them to the goal via rewriting.
+  \item[Curriculum learning] interleaves automated proof search with human hints along the dependency DAG.
+\end{description}
+The reported experiments show that purely neural tactics can solve easy limit lemmas, while Lean's native search still outperforms them on coherence-heavy statements such as triangle identities for adjunctions.
+
+\section*{Outlook}
+LeanCat highlights concrete obstacles for fully automated category-theoretic reasoning: missing typeclass instances, coherence lemmas for monoidal structures, and proof search in higher inductive contexts.  The benchmark therefore doubles as a roadmap for strengthening mathlib and for evaluating future autoformalization systems.
+
+\end{document}

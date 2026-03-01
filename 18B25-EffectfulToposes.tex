@@ -1,0 +1,55 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{EffectfulToposes}
+\pmcreated{2026-03-01 17:35:00}
+\pmmodified{2026-03-01 17:35:00}
+\pmowner{codex}{0}
+\pmmodifier{codex}{0}
+\pmtitle{effectful toposes}
+\pmrecord{0}{0}
+\pmprivacy{1}
+\pmauthor{codex}{0}
+\pmtype{Article}
+\pmclassification{msc}{18B25}
+\pmclassification{msc}{18C30}
+\pmrelated{LawvereTierneyTopology}
+\pmrelated{ToposOfTrees}
+\pmrelated{RealizabilityTopos}
+\pmdefines{effectful topos}
+\pmdefines{evidenced geometric morphism}
+\pmdefines{effectful Lawvere--Tierney topology}
+
+\endmetadata
+
+\usepackage{amsmath,amssymb,amsfonts}
+\newcommand{\Sh}{\mathbf{Sh}}
+\newcommand{\Top}{\mathbf{Top}}
+\newcommand{\Set}{\mathbf{Set}}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\F}{\mathcal{F}}
+\newcommand{\Mod}{\mathsf{Mod}}
+
+\begin{document}
+\section*{Definition}
+An \emph{effectful topos} consists of an elementary topos $\E$ together with an \emph{evidenced geometric morphism}
+\[
+\epsilon\colon \E \longrightarrow \mathcal{P}
+\]
+to a base topos $\mathcal{P}$ equipped with a specified algebra of modalities.  The evidence comprises natural transformations witnessing how $\epsilon$ preserves/reflects covering families and how the induced double-negation-like operator interacts with the subobject classifier.  Intuitively, $\epsilon$ records the ``effects'' that computations internal to $\E$ may produce.
+
+A Lawvere--Tierney topology $j\colon\Omega\to\Omega$ in $\E$ is called \emph{effectful} if it arises from an evidence datum (for example, an exception, state, or probabilistic monad) by transposing the continuation-passing style interpretation of the effect.  Sheaves for $j$ form a reflective subtopos that isolates the given effect.
+
+\section*{Examples}
+\begin{itemize}
+  \item The effective topos is recovered by taking $\mathcal{P}=\ToposOfTrees$ with the usual realizability modality; here the effect captures computability with partial recursive realizers.
+  \item Double-negation forcing $j(p)=\neg\neg p$ presents the Booleanisation effect; its evidence is the continuation-passing translation for classical control.
+  \item For a probability monad $\mathsf{Dist}$ on $\Set$, one obtains an effectful topos whose $j$ encodes probabilistic modality; the evidencing morphism is induced by Day convolution on the Kleisli category of $\mathsf{Dist}$.
+\end{itemize}
+
+\section*{Lawvere--Tierney semantics of effects}
+Given an effectful topology $j$, Kripke--Joyal semantics internal to $\E$ assigns to each formula the weakest $j$-closed subobject supporting it.  Algebraic effects and handlers are interpreted by factorising morphisms through the modal operator.  Classical continuation-passing translations become the adjunction between the inclusion of $j$-sheaves and its left exact left adjoint, and thus effect handlers correspond to modal idempotents.
+
+\section*{Sheafification and realizability}
+Effectful toposes admit sheafification functors $a_j\colon\E\to\Sh_j(\E)$ producing the semantics where the effect has been ``handled''.  When the evidence arises from a realizability presentation (e.g. partial combinatory algebras), the sheafification reproduces standard realizability triposes.  More generally, any effectful topology determines an algebra modality in the sense of synthetic domain theory, situating effectful toposes within the panorama of categorical semantics of programming effects.
+
+\end{document}
