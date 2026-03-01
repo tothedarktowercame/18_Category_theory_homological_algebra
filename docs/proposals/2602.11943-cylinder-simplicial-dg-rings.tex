@@ -1,0 +1,43 @@
+% PlanetMath proposal draft for arXiv:2602.11943
+% Source corpora: arXiv math.CT eprints, storage/mo-processed-gpu, storage/math-processed-gpu
+\section*{Cylinder simplicial DG rings and Kan conditions}
+\subsection*{Source}
+\begin{itemize}
+  \item arXiv:2602.11943, ``The Cylinder Simplicial DG Ring'' (February 2026)
+  \item MathOverflow threads on DG Morita equivalence, semi-free cdga homology, and path objects in CDGA (IDs 245448, 111688, 239240)
+  \item Math.StackExchange questions on bar constructions and Kähler differentials for DG algebras (IDs 4288818, 4216165)
+\end{itemize}
+\subsection*{Synopsis}
+Yekutieli defines the $q$-th cylinder DG ring $\Cyl_q(B)$ for any DG ring $B$, showing that $\Cyl(B)$ forms a simplicial DG ring encoding homotopies of DG ring maps. If $A$ is semi-free, then $\Hom(A,\Cyl(B))$ is a Kan complex. The proof constructs DG representatives for simplicial horns, verifies lifting conditions, and argues that these constructions extend to DG categories.
+\begin{enumerate}
+  \item For each $q\ge 0$, builds $\Cyl_q(B)$ so that $\Cyl_1(B)$ recovers Keller's cylinder/path object and higher $q$ assemble into a simplicial DG ring.
+  \item Shows that $\Hom(A,\Cyl(B))$ inherits a simplicial structure whose $n$-simplices are DG maps $A\to\Cyl_n(B)$.
+  \item Proves the Kan lifting property when $A$ is semi-free by representing horns via DG rings $\mathrm{N}(\Lambda^q_i,B)$ fit into exact sequences.
+  \item Interprets the horn fillings explicitly in terms of DG algebra operations, which gives constructive homotopies of DG ring maps.
+  \item Suggests extensions to DG categories and derived completion contexts.
+\end{enumerate}
+\subsection*{MathOverflow cues}
+\begin{description}
+  \item[MO 245448] Connects derived equivalence with DG Morita equivalence, underscoring why cylinder/path objects are important for DG homotopy theory.
+  \item[MO 111688] Discusses cyclic homology of semi-free cdgas, motivating the semi-free hypothesis in the Kan condition.
+  \item[MO 239240] Provides examples of small homotopy limits in CDGAs using path objects, paralleling the cylinder construction here.
+\end{description}
+\subsection*{Math.SE anchors}
+\begin{description}
+  \item[Math.SE 4288818] Asks why the bar construction of a DG algebra is a coalgebra—useful background for interpreting the simplicial structure on $\Cyl(B)$.
+  \item[Math.SE 4216165] Seeks definitions of Kähler differentials for DG algebras, aligning with the technical tools used in the horn-representing DG rings.
+\end{description}
+\subsection*{Encyclopedia outline}
+\begin{enumerate}
+  \item Definition of the $q$-th cylinder DG ring and relation to Keller's cylinder.
+  \item Simplicial structure on $\Cyl(B)$ and induced simplicial sets $\Hom(A,\Cyl(B))$.
+  \item Construction of horn DG rings $\mathrm{N}(\Lambda^q_i,B)$ and the Kan lifting proof for semi-free sources.
+  \item Examples and remarks on extending to DG categories or derived algebraic geometry.
+\end{enumerate}
+\subsection*{Action items}
+\begin{itemize}
+  \item Write a PlanetMath entry describing $\Cyl(B)$, including explicit formulas for $q$-simplices and degeneracy faces.
+  \item Explain the horn-representing DG rings and why semi-free $A$ guarantees liftings.
+  \item Cross-link to entries on DG homotopy, model structures on DG rings, and Keller's path object.
+  \item Mention potential DG-category generalizations and references for further reading.
+\end{itemize}
