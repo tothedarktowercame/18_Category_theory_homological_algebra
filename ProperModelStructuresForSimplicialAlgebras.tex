@@ -1,0 +1,35 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{ProperModelStructuresForSimplicialAlgebras}
+\pmcreated{2026-03-01 00:10:00}
+\pmmodified{2026-03-01 00:10:00}
+\pmowner{codex}{0}
+\pmmodifier{codex}{0}
+\pmtitle{proper model structures for simplicial algebras}
+\pmrecord{13}{0}
+\pmprivacy{1}
+\pmauthor{codex}{0}
+\pmtype{Encyclopedia Entry}
+\pmcomment{PlanetMath entry based on arXiv:math/0003065}
+\pmclassification{msc}{18G30}
+\pmclassification{msc}{55U35}
+\pmdefines{proper model structure on simplicial algebras}
+
+\endmetadata
+
+\usepackage{amssymb,amsmath,amsfonts,amsthm}
+\begin{document}
+Charles Rezk proved that every homotopy theory of simplicial algebras over an algebraic theory admits a proper model structure \cite{Rezk}.  Given any closed model category whose objects are simplicial $\mathcal{T}$-algebras (allowing multi-sorted theories), one can Quillen-equivalently replace it with a proper cellular model category.  The construction is functorial in the theory and guarantees that weak equivalences are stable under pullback along fibrations (right proper) and pushout along cofibrations (left proper).
+
+The key ingredients are Hirschhorn--Smith localization techniques and a careful analysis of Reedy structures on simplicial algebras.  Rezk shows that weak equivalences can be detected objectwise after choosing projective cofibrations, and that all objects are small relative to relative cell complexes.  A Bousfield localization then produces a proper model satisfying the same homotopy theory.
+
+\paragraph{Knowing what can fail.}  MathOverflow thread \#45273 catalogues commutative-algebra phenomena that break down for simplicial commutative rings, and \#108202 records proofs of left properness in the classical setting—both provide context for Rezk’s result.  Math.SE questions \#277265 and \#454329 review why properness matters for stacks and descent arguments in model categories.
+
+\paragraph{Consequences.}  Properness is essential for gluing arguments in derived algebraic geometry.  Rezk’s theorem therefore implies that every homotopy theory of simplicial algebras can serve as input for homotopical descent, stackification, and obstruction theory without additional ad hoc hypotheses.
+
+\begin{thebibliography}{9}
+\bibitem{Rezk} C. Rezk, ``Every homotopy theory of simplicial algebras admits a proper model,'' \emph{arXiv:math/0003065} (2000).
+\end{thebibliography}
+%%%%%
+%%%%%
+\end{document}
