@@ -1,0 +1,40 @@
+% PlanetMath proposal draft for arXiv:2512.24796
+% Source corpora: arXiv math.CT eprints, storage/mo-processed-gpu, storage/math-processed-gpu
+\section*{LeanCat: benchmarking formal category theory}
+\subsection*{Source}
+\begin{itemize}
+  \item arXiv:2512.24796, "LeanCat: A benchmark for formal category theory in Lean" (last revised 2026-02-25)
+  \item StackExchange cross-links via storage/mo-processed-gpu + math-processed-gpu
+\end{itemize}
+\subsection*{Synopsis}
+Bahrami--Carchedi--Das--Gupta et al. curate \textsc{LeanCat}, a suite of formalization tasks covering core category theory, adjunctions, limits, and monoidal structures inside Lean's mathlib. They evaluate LLM-assisted proof search, retrieval-augmented tactic synthesis, and curriculum strategies, exposing the current automation gap for higher categorical theorems.
+\begin{enumerate}
+  \item Specify the dataset geometry: 208 statements grouped by topic, dependency DAGs, and Lean-level metadata.
+  \item Benchmark state-of-the-art autoformalization agents (OpenAI o1, Goedel, DeepSeek) with/without retrieval.
+  \item Analyse failure modes (missing typeclass instances, higher coherence) and propose tactic improvements.
+  \item Highlight successful blueprints for adjunctions, limits, and monoidal structures to guide community efforts.
+\end{enumerate}
+\subsection*{MathOverflow cues}
+\begin{description}
+  \item[MO: formalizing category theory] Threads cataloging Lean/mathlib resources for adjunctions and limits.
+  \item[MO: LLM proof assistants] Discussions on integrating LLMs with Lean for higher category theory.
+\end{description}
+\subsection*{Math.SE anchors}
+\begin{description}
+  \item[Math.SE: Lean mathlib category theory] Q\&A collecting learning resources and tactic guidance.
+  \item[Math.SE: automation of adjunction proofs] Community answers on structuring adjunction proofs in Lean.
+\end{description}
+\subsection*{Encyclopedia outline}
+\begin{enumerate}
+  \item \textbf{Benchmark structure.} Describe the dataset, tagging scheme, and dependency graphs.
+  \item \textbf{Automation baselines.} Summarize the evaluated agents and tactic stacks.
+  \item \textbf{Case studies.} Present adjunction + limit examples that succeeded/failed.
+  \item \textbf{Research challenges.} List the automation gaps (coherence, higher morphisms) highlighted by LeanCat.
+  \item \textbf{PlanetMath integration.} Explain how Lean snippets can annotate encyclopedia entries.
+\end{enumerate}
+\subsection*{Action items}
+\begin{itemize}
+  \item Record Lean hyperlinks for each task cluster (limits, adjunctions, monoidal categories).
+  \item Draft a companion PlanetMath page summarizing meta-level lessons about proof automation.
+  \item Coordinate with mathlib maintainers for embedding LeanCat metadata into category-theory entries.
+\end{itemize}

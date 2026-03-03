@@ -1,0 +1,56 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{CoalgebraicAnalysisOfSocialSystems}
+\pmcreated{2026-03-01 17:40:00}
+\pmmodified{2026-03-01 17:40:00}
+\pmowner{codex}{0}
+\pmmodifier{codex}{0}
+\pmtitle{coalgebraic analysis of social systems}
+\pmrecord{0}{0}
+\pmprivacy{1}
+\pmauthor{codex}{0}
+\pmtype{Article}
+\pmclassification{msc}{18C50}
+\pmclassification{msc}{91D30}
+\pmrelated{CoalgebraicModalLogic}
+\pmrelated{Hypergraph}
+\pmrelated{Bisimulation}
+\pmdefines{social coalgebra}
+\pmdefines{positional modality}
+
+\endmetadata
+
+\usepackage{amsmath,amssymb,amsfonts}
+\newcommand{\Set}{\mathbf{Set}}
+\newcommand{\Rel}{\mathbf{Rel}}
+\newcommand{\Coalg}{\mathbf{Coalg}}
+\newcommand{\Pow}{\mathcal{P}}
+\newcommand{\Fun}{\mathsf{F}}
+\newcommand{\G}{\mathsf{G}}
+
+\begin{document}
+\section*{Coalgebraic models}
+A social system can be encoded as a coalgebra $(X,\gamma)$ for an endofunctor $\Fun$ on $\Set$ (or on a suitable category of relational/hypergraph structures).  Typically $X$ is the set of agents and $\Fun$ assigns to every set the collection of roles, ties, or higher-order interactions that an agent can maintain.  For instance:
+\begin{itemize}
+  \item Relational networks correspond to the functor $\Fun(X)=\Pow(X)^n$ recording adjacency lists.
+  \item Uniform hypergraphs arise from $\Fun(X)=\Pow(\Pow(X))$.
+  \item Higher-order interaction data are captured by polynomial functors of the form $\sum_{i} X^{A_i}$.
+\end{itemize}
+A \emph{social coalgebra} is such a pair $(X,\gamma)$ together with a specification of observable predicates called \emph{positional modalities}.
+
+\section*{Positional logics}
+Let $\Lambda$ be a set of unary modalities for $\Fun$, in the sense of coalgebraic modal logic.  The semantics of a modal formula $[\lambda] \varphi$ at an agent $x$ is determined by evaluating $\lambda$ on the observable neighbourhood $\gamma(x)$.  For social systems these modalities encode statements such as "all acquaintances satisfy $\varphi$" or "there exists a hyperedge of size $k$ whose participants satisfy $\varphi$".  Soundness and completeness of the resulting positional logic follow from the standard coalgebraic cover modality results.
+
+\section*{Behavioural equivalence}
+Two agents $x,y$ (possibly in different systems) are \emph{behaviourally equivalent} if there exists a bisimulation $R$ between their coalgebras with $(x,y)\in R$.  Behavioural equivalence implies indistinguishability by all modal formulas and gives a categorical version of role/position equivalence from social network theory.  The main theorem of Baldan--Bonchi--Montecchiani--Pavlovic asserts that coalgebraic bisimulations capture the classical notions of structural equivalence, regular equivalence, and blockmodel reduction even in hypergraph and higher-order settings.
+
+\section*{Applications}
+The coalgebraic viewpoint unifies many metrics on social data:
+\begin{itemize}
+  \item Functorial semantics allow changing the shape of interactions without re-deriving proofs.
+  \item Coalgebra homomorphisms provide abstractions of large networks by quotients modulo bisimulations.
+  \item The modal language gives a logic for specifying policies or norms that agents must satisfy.
+\end{itemize}
+These techniques integrate smoothly with existing category-theoretic approaches to complex networks and process theory, supplying a rigorous semantics for qualitative social-structural analysis.
+
+\end{document}

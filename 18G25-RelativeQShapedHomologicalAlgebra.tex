@@ -1,0 +1,62 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{RelativeQShapedHomologicalAlgebra}
+\pmcreated{2026-03-01 17:30:00}
+\pmmodified{2026-03-01 17:30:00}
+\pmowner{codex}{0}
+\pmmodifier{codex}{0}
+\pmtitle{relative $Q$-shaped homological algebra}
+\pmrecord{0}{0}
+\pmprivacy{1}
+\pmauthor{codex}{0}
+\pmtype{Article}
+\pmclassification{msc}{18G25}
+\pmclassification{msc}{18G10}
+\pmrelated{GorensteinProjectiveModule}
+\pmrelated{ExactModelStructure}
+\pmrelated{Recollement}
+\pmdefines{$Q$-shaped derived category}
+\pmdefines{relative $Q$-Gorenstein projective}
+\pmdefines{relative $Q$-model structure}
+
+\endmetadata
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{stmaryrd}
+\newcommand{\Hom}{\operatorname{Hom}}
+\newcommand{\Ext}{\operatorname{Ext}}
+\newcommand{\C}{\mathcal{C}}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\D}{\mathcal{D}}
+\newcommand{\Q}{\mathcal{Q}}
+\newcommand{\Ho}{\operatorname{Ho}}
+\newcommand{\Der}{\operatorname{D}}
+
+\begin{document}
+\section*{Relative $Q$-diagrams}
+Let $Q$ be a small $\Bbbk$-linear category and $(\A,\mathscr{E})$ an exact category.  A \emph{$Q$-diagram} in $\A$ is an additive functor $X\colon Q\to\A$; the resulting functor category is denoted $Q\text{-} \A$.  Each conflation $0\to A\to B\to C\to0$ in $\mathscr{E}$ induces levelwise conflations in $Q\text{-}\A$, so $Q\text{-}\A$ inherits a family of exact structures ranging from the split structure to the objectwise one.  Following Holm--J\o rgensen, the homotopy category of bounded complexes in $Q\text{-}\A$ modulo $Q$-acyclic complexes is called the \emph{$Q$-shaped derived category} and written $\Der_Q(\A)$.
+
+\section*{Relative $Q$-Gorenstein projectives}
+Fix a detection functor $\Phi\colon Q\text{-}\A\to\C$ landing in an abelian category.  An object $X$ in $Q\text{-}\A$ is \emph{relative $Q$-Gorenstein projective} (with respect to $\Phi$) if $X$ lies in the kernel of $\Ext^1_{Q\text{-}\A}(\Phi(-),\Phi(X))$ and admits a complete resolution by $Q$-projectives that stays exact under $\Phi$.  This definition interpolates between classical Gorenstein projectives (when $Q$ is the trivial category) and Holm--J\o rgensen's absolute $Q$-versions.
+
+\begin{theorem}
+Let $(Q,\A,\mathscr{E})$ be as above and assume $Q\text{-}\A$ has enough projectives for the chosen exact structure.  Then the triple of classes consisting of:
+\begin{itemize}
+  \item cofibrant objects given by relative $Q$-Gorenstein projectives,
+  \item trivial objects the $Q$-acyclic complexes, and
+  \item fibrant objects the $Q$-injective diagrams,
+\end{itemize}
+defines an exact model structure on $Q\text{-}\A$.  Its homotopy category identifies with $\Der_Q(\A)$, and changing the exact structure on $\A$ produces Bousfield localisation sequences between the corresponding homotopy categories.
+\end{theorem}
+
+\section*{Recollement patterns}
+Let $\mathscr{E}_{\mathrm{spl}} \subseteq \mathscr{E}_{\mathrm{obj}} \subseteq \mathscr{E}_{\mathrm{ab}}$ denote the split, objectwise, and ambient abelian exact structures.  The induced model structures give localisation sequences
+\[
+\Ho(Q\text{-}\A, \mathscr{E}_{\mathrm{spl}}) \longrightarrow \Ho(Q\text{-}\A, \mathscr{E}_{\mathrm{obj}}) \longrightarrow \Ho(Q\text{-}\A, \mathscr{E}_{\mathrm{ab}})
+\]
+that restrict to recollements for categories of the form ${}_{Q,A}\mathrm{Mod}$.  Consequently, the $Q$-shaped derived category can be expressed as a Verdier quotient of the homotopy category of relative $Q$-projective model structures, generalising the Verdier/Krause/Iyama--Kato--Miyachi recollement for absolute diagrams.
+
+\section*{Relations to homological invariants}
+Relative $Q$-model structures simultaneously control $\Ext$-groups and derived functors computed objectwise or quiverwise.  In particular, relative Gorenstein projectives detect when morphisms become isomorphisms in $\Der_Q(\A)$, and the detection functors $\Phi$ commuting with filtered colimits yield compact generation criteria for the resulting homotopy categories.  These properties connect the new theory to classical Gorenstein homological algebra as well as to representation theory of small categories.
+
+\end{document}

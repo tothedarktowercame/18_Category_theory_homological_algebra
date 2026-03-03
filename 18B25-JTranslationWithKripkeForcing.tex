@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\usepackage{pmmeta}
+\pmcanonicalname{JTranslationWithKripkeForcing}
+\pmcreated{2026-03-01 17:45:00}
+\pmmodified{2026-03-01 17:45:00}
+\pmowner{codex}{0}
+\pmmodifier{codex}{0}
+\pmtitle{a $j$-translation with Kripke forcing relation}
+\pmrecord{0}{0}
+\pmprivacy{1}
+\pmauthor{codex}{0}
+\pmtype{Article}
+\pmclassification{msc}{18B25}
+\pmclassification{msc}{03F55}
+\pmrelated{LawvereTierneyTopology}
+\pmrelated{KripkeModel}
+\pmrelated{RealizabilityTopos}
+\pmdefines{$j$-forcing}
+\pmdefines{$j$-translation}
+
+\endmetadata
+
+\usepackage{amsmath,amssymb,amsfonts}
+\newcommand{\E}{\mathcal{E}}
+\newcommand{\OmegaE}{\Omega}
+\newcommand{\True}{\mathbf{1}}
+
+\begin{document}
+\section*{Lawvere--Tierney topologies}
+Let $\E$ be an elementary topos with subobject classifier $\OmegaE$.  A Lawvere--Tierney topology is an idempotent, order-preserving operator $j\colon\OmegaE\to\OmegaE$ satisfying $1\leq j(\top)$ and $j(p\land q)=j(p)\land j(q)$.
+The \emph{$j$-modal} truth values are those fixed by $j$, and the inclusion $\Sh_j(\E)\hookrightarrow \E$ has a left exact left adjoint $a_j$ (sheafification).
+
+\section*{$j$-translations}
+Given the internal language of $\E$, the $j$-translation of a formula $\varphi$ is obtained by inserting $j$ after every positive occurrence of a subformula.  For instance,
+\[
+(\exists x\, \varphi(x))^j \;:=\; \exists x\, j(\varphi(x)^j),
+\qquad (\varphi\Rightarrow\psi)^j := j(\varphi^j \Rightarrow \psi^j).
+\]
+Awodey and Frey show that if a sequent is provable in intuitionistic first-order logic (or in Heyting arithmetic) then its $j$-translation is forced in the Kripke semantics described below.
+
+\section*{$j$-forcing}
+Define the \emph{$j$-forcing relation} $\Vdash_j$ between stage objects $U$ and formulas by the clauses
+\begin{align*}
+U \Vdash_j \varphi \land \psi &\iff U \Vdash_j \varphi \text{ and } U \Vdash_j \psi, \\
+U \Vdash_j \exists x\, \varphi(x) &\iff \text{there exists a cover } \{V_i\to U\}_i \text{ with } V_i \Vdash_j \varphi(a_i), \\
+U \Vdash_j \varphi\Rightarrow\psi &\iff j(\{ x\mid x\Vdash_j \varphi\}) \subseteq \{x\mid x\Vdash_j \psi\}.
+\end{align*}
+The clause for atomic formulas factors through the sheafification $a_j$.  These clauses reduce to standard Kripke forcing when $j$ is the identity and to double-negation forcing when $j$ is the double-negation operator.
+
+\section*{Semi-classical principles}
+The $j$-forcing relation allows a uniform analysis of semi-classical schemes such as the lesser limited principle of omniscience (LLPO), weak law of excluded middle (WLEM), and Markov's principle (MP).  The main result states that:
+\begin{itemize}
+  \item LLPO holds in $\Vdash_j$ if and only if $j$ is complemented by a De Morgan topology;
+  \item WLEM holds exactly when $j$ is dense and idempotent; and
+  \item MP is validated iff $j$ stabilises overt subobjects (as in realizability).
+\end{itemize}
+Thus classical reasoning can be imported into $\E$ by choosing an appropriate $j$ without losing track of Kripke semantics.
+
+\end{document}
